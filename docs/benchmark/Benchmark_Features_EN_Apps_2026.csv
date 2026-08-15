@@ -1,0 +1,36 @@
+App,Feature,Category,Priority,PQTV Recommendation
+Duolingo,"Gamification: streak, league, XP",Gamification,High,Streak + XP + league
+Duolingo,Free tier thấp barrier,Pricing,High,Giữ free đủ giá trị
+Duolingo,Bite-size 3-5 phút,UX,High,Lesson ngắn
+Duolingo,Map unit rõ tiến độ,UX,Medium,Visualize progress
+Duolingo,AI giải thích lỗi,AI,High,Tutor giải thích lỗi
+Duolingo,Stories + audio,Content,Medium,Audio stories
+Duolingo,Streak Freeze,Retention,Medium,Streak Freeze
+Duolingo,Duolingo Score,Assessment,Medium,Score theo việc
+Babbel,Lesson 10-15 phút thực tế,UX,High,Tình huống việc
+Babbel,Nói từ ngày đầu,Speaking,High,Miệng là lõi
+Babbel,Speech recognition,Speaking,High,ASR + feedback
+Babbel,Review manager SRS,Retention,High,SRS câu đã dùng
+Babbel,Content theo mục tiêu,Content,High,Theo nghề
+Babbel,AI Speak,AI,High,AI Speaking Coach
+Busuu,Lộ trình CEFR,Curriculum,High,Mốc năng lực rõ
+Busuu,AI Conversations,AI,High,Hội thoại AI
+Busuu,Personalized study plan,Personalization,High,Lộ trình việc
+Busuu,Vocab trainer SRS,Retention,High,Ôn từ đã dùng
+Speak,Audio-first 5 phút,UX,High,Audio-first
+Speak,Roleplay âm thanh,Speaking,High,Roleplay việc
+Speak,Free Talk,Speaking,High,Mở topic việc
+Speak,Made For You,Personalization,High,Bài từ lỗi + nghề
+Speak,Speak Level,Assessment,High,Đo nói theo việc
+Speak,Pronunciation Coach,Speaking,High,Feedback âm
+ELSA Speak,Feedback từng âm,Speaking,High,Phát âm / thanh điệu
+ELSA Speak,Path từ assessment,Personalization,High,Path từ đầu vào
+ELSA Speak,Roleplay Labs,Speaking,High,Roleplay + feedback
+ELSA Speak,Multi-accent,Speaking,Medium,Anh đa giọng; Trung đa vùng
+Langua,Giọng human-like,Speaking,High,Giọng thật
+Langua,Sửa realtime + báo cáo,Feedback,High,Lỗi thành bài
+Langua,Save word mid-chat,Vocabulary,High,Từ vừa nói → ôn
+Langua,My Path adaptive,Personalization,High,Path theo nghề
+Praktika,AI tutor chuyên Anh,AI,High,Tutor Anh + Trung
+Praktika,Roleplay việc,Speaking,High,Interview meeting travel + ca làm
+Praktika,Analytics fluency,Analytics,High,Dashboard việc làm được
