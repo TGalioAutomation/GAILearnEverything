@@ -8,37 +8,41 @@ import Nav from "@/app/components/Nav";
 export default function Dashboard() {
   const router = useRouter();
   const [learner, setLearner] = useState(null);
-
   useEffect(() => {
     const l = loadLearner();
     if (!l) router.replace("/onboarding");
     else setLearner(l);
   }, [router]);
-
   if (!learner) return null;
   const p = PERSONAS[learner.persona];
   const speaks = learner.speaks || [];
-  const okJobs = [...new Set(speaks.filter((s) => s.ok).map((s) => s.prompt))];
+  const ok = speaks.filter((s) => s.ok);
 
   return (
     <main className="wrap">
-      <div className="brand">VIỆC BẠN NÓI ĐƯỢC</div>
+      <span className="stamp">Không phải XP</span>
       <h1>Hôm nay nói được gì?</h1>
-      <p className="lead">{p.name} · {okJobs.length}/3 tình huống đã nói đủ ý</p>
+      <p className="lead">{p.name}. North star: 3 tình huống, không đọc script.</p>
 
-      <div className="card">
-        <p>3 tình huống phải chinh phục</p>
-        {p.jobs.map((j) => (
-          <p key={j}>{okJobs.some((x) => x.includes(j.slice(0, 8))) ? "✓" : "○"} {j}</p>
-        ))}
+      <div className="sheet">
+        <h2>3 việc phải chinh phục</h2>
+        {p.jobs.map((j, i) => {
+          const done = ok.some((s) => s.prompt && (s.prompt.includes(j.slice(0, 6)) || i === 0 && ok.length > i));
+          return (
+            <div className="job" key={j}>
+              <span className={`dot ${ok.length > i ? "done" : ""}`}>{ok.length > i ? "✓" : i + 1}</span>
+              <div><b>{j}</b></div>
+            </div>
+          );
+        })}
       </div>
 
-      <div className="card">
-        <p>Lần nói gần nhất</p>
-        {speaks.slice(0, 5).map((s, i) => (
-          <p key={i} className={s.ok ? "ok" : "warn"}>{s.said || "(im lặng)"} — {s.prompt}</p>
+      <div className="sheet">
+        <h2>Lần mở miệng gần nhất</h2>
+        {speaks.slice(0, 4).map((s, i) => (
+          <p key={i} className={s.ok ? "ok" : "warn"}>{s.said || "(im)"}</p>
         ))}
-        {speaks.length === 0 && <p className="lead">Chưa nói. Chưa học.</p>}
+        {!speaks.length && <p className="lead">Chưa nói. Chưa học.</p>}
       </div>
       <Nav active="dash" />
     </main>
