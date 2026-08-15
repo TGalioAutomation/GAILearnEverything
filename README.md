@@ -1,30 +1,24 @@
 # GAILearnEverything (PQTV)
 
-Gia sư AI dạy **tiếng Anh** và **tiếng Trung** cho **người Việt mới hoàn toàn**.
-Giáo trình = ngành + nhu cầu + vị trí hiện tại. Thông thạo = làm được việc bằng ngôn ngữ đó.
+Webapp gia sư AI: **tiếng Anh / tiếng Trung** cho người Việt **zero**. Giáo trình = việc đang làm.
 
-## Trạng thái sản phẩm
+## Chạy webapp
 
-**Doctrine + CPO v1 đã khóa.** Mọi spec phải qua cửa doctrine.
+```bash
+npm install
+npm run dev
+```
 
-## Tài liệu gốc
+Mở http://localhost:3000
 
-| File | Vai trò |
-|------|--------|
-| [docs/PQTV_Product_Doctrine_v1.md](docs/PQTV_Product_Doctrine_v1.md) | Luật sản phẩm — không được phá |
-| [docs/CPO_V1_LOCKED.md](docs/CPO_V1_LOCKED.md) | North star, chân dung, mốc, ngoài phạm vi — đã khóa |
-| [docs/PERSONAS_V1.md](docs/PERSONAS_V1.md) | 3 chân dung việc mở đầu |
-| [docs/LEARNER_JOURNEY.md](docs/LEARNER_JOURNEY.md) | Hành trình zero → thông thạo việc |
-| [docs/PRODUCT_V1_SCOPE.md](docs/PRODUCT_V1_SCOPE.md) | Làm / không làm v1 |
-| [docs/ROADMAP_90_DAYS.md](docs/ROADMAP_90_DAYS.md) | 90 ngày sản phẩm |
-| [docs/benchmark/Benchmark_Features_EN_Apps_2026.csv](docs/benchmark/Benchmark_Features_EN_Apps_2026.csv) | Đối thủ |
+## Luồng v1 đang chạy
 
-## Năm luật
+1. Chọn 1 ngôn ngữ + 1 chân dung + số phút
+2. Nói 3 tình huống việc (mic hoặc gõ)
+3. Dashboard: hôm nay nói được việc gì
 
-1. Zero không được sợ
-2. Việc của bạn là giáo trình
-3. Miệng trước, chữ theo sau
-4. Lỗi hôm nay là bài ngày mai
-5. Thông thạo = làm được việc
+AI v1: coach luật + Web Speech API. Chưa gắn LLM — đúng thứ tự: miệng trước, model sau.
 
-Luật cứng: zero chỉ học **một ngôn ngữ** trước.
+## Tài liệu CPO (đã khóa)
+
+Xem thư mục [docs/](docs/).
